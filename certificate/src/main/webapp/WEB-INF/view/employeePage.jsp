@@ -11,24 +11,24 @@
 
   <h1>USER INFORMATION</h1><br>
   <button onclick="window.location.href='/certificate'">logout</button><br><br>
-     <h4>Employee name: ${emp.empName}</h4>
-     <h4>Employee Id: ${emp.emplId}</h4>
+     <h4>Employee name: ${usr.empName}</h4>
+     <h4>Employee Id: ${usr.empId}</h4>
 
   <table border=1>
     <tr>
-      <th>certificateName</th>
-      <th>Certificate startDate</th>
-      <th>Certificate endDate</th>
+      <th>Certificate Name</th>
+      
+      <th>Certification Due Date</th>
       <th>Certificate status</th>
     </tr>
-    <c:forEach var="certificate" items="${emp.certificates}">
+    
       <tr>
-        <td>${certificate.certificateName}</td>
-        <td>${certificate.startDate}</td>
-        <td>${certificate.endDate}</td>
-        <td>${certificate.status}</td>
+        <td>${usr.certName}</td>
+       
+        <td>${usr.date}</td>
+        <td>${usr.status}</td>
       </tr>
-    </c:forEach>
+    
   </table>
 
 </body>

@@ -44,8 +44,8 @@ public ModelAndView login(@ModelAttribute("admin") Data data,BindingResult resul
 	}
 	else if(role.equalsIgnoreCase("employee"))
 	{
-		//data=service.getDetails(data);
-		mv.addObject("usr", data);
+		Certification cert =service.getEmployeeInfo(data);
+		mv.addObject("usr", cert);
 		mv.setViewName("employeePage");
 	}
 	else

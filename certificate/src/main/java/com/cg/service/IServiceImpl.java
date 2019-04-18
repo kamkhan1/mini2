@@ -46,4 +46,11 @@ public class IServiceImpl implements IService{
 		return dao.addingCertification(cert);
 	}
 
+
+	@Override
+	public Certification getEmployeeInfo(Data data) {
+		
+		return dao.getEmployeeInfo(data);
+	}
+
 }

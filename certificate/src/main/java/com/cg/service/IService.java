@@ -17,4 +17,6 @@ public interface IService {
 
 	boolean addingCertification(Certification cert);
 
+	Certification getEmployeeInfo(Data data);
+
 }

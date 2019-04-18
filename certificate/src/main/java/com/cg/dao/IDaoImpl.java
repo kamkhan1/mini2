@@ -4,12 +4,13 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.validation.BindingResult;
 
 import com.cg.bean.Certification;
 import com.cg.bean.Data;
-
+@Transactional
 public class IDaoImpl implements IDao{
     @PersistenceContext
 	EntityManager em;
@@ -50,6 +51,19 @@ public class IDaoImpl implements IDao{
 	public boolean addingCertification(Certification cert) {
 		em.persist(cert);
 		return false;
+	}
+
+	@Override
+	public Certification getEmployeeInfo(Data data) {
+		
+		Certification cert=em.find(Certification.class, data.getEmpId());
+		
+		if(cert==null)
+		return null;
+		else
+		{
+			return cert;
+		}
 	}
 
 }

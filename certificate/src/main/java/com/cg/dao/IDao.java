@@ -17,4 +17,6 @@ public interface IDao {
 
 	boolean addingCertification(Certification cert);
 
+	Certification getEmployeeInfo(Data data);
+
 }
