@@ -20,7 +20,7 @@ User Name:
 <f:errors></f:errors>
 <br>
 Password: 
-<f:input type = "text" path="password"/>
+<f:input type = "password" path="password"/>
 <f:errors></f:errors>
 <br>
 

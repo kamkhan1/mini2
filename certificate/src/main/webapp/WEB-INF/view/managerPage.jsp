@@ -32,9 +32,10 @@
             
     </table>
     <br>
-    <a href="employee">Get certification detail</a>
+    <a href="employee">Get certification detail</a><br>
     <a href="assign">Assign a certification to an employee</a>
-
+<br>
+ <button onclick="window.location.href='/certificate'">logout</button>
 
 </center>
 

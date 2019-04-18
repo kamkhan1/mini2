@@ -44,7 +44,7 @@ public ModelAndView login(@ModelAttribute("admin") Data data,BindingResult resul
 	}
 	else if(role.equalsIgnoreCase("employee"))
 	{
-		
+		//data=service.getDetails(data);
 		mv.addObject("usr", data);
 		mv.setViewName("employeePage");
 	}
@@ -69,7 +69,7 @@ public ModelAndView details(@ModelAttribute("emp") Certification certificate)
    ModelAndView mv=new ModelAndView();
    Certification cert=service.getDetails(certificate);
    if(cert!=null)
-   {mv.addObject("certificate", cert);
+   {mv.addObject("emp", cert);
    mv.setViewName("addingCertificate");
    return mv;
 }  else

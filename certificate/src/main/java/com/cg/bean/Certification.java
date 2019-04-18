@@ -12,7 +12,7 @@ public class Certification {
 	String certName;
 	String empName;
 	String Status;
-	Date date;
+	String date;
 	public String getCertId() {
 		return certId;
 	}
@@ -43,10 +43,10 @@ public class Certification {
 	public void setStatus(String status) {
 		Status = status;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	
